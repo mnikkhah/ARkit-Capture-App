@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="testAR1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U0K-SW-4ec">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BrB-h1-WRS">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                            </arscnView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Capture!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gML-oq-tbU">
+                                <rect key="frame" x="0.0" y="752" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="o4g-Hy-iWo"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="pYh-dd-vBX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dbf-kE-5Bf">
+                                <rect key="frame" x="50" y="704" width="50" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="P9Y-qj-KBY"/>
+                                    <constraint firstAttribute="width" constant="50" id="WZ9-uD-CYL"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="video" catalog="system">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <state key="selected" backgroundImage="video.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="recordSwitch:" destination="BV1-FR-VrT" eventType="touchUpInside" id="iNz-9U-H8d"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i2l-xe-bHh">
+                                <rect key="frame" x="27" y="790" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Go-od-Nx6">
+                                <rect key="frame" x="302" y="704" width="50" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="CRE-bV-f4y"/>
+                                    <constraint firstAttribute="height" constant="47.5" id="Gg6-am-c9H"/>
+                                    <constraint firstAttribute="width" constant="50" id="aL7-xZ-JA8"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="trash" catalog="system"/>
+                                <connections>
+                                    <action selector="trashFiles:" destination="BV1-FR-VrT" eventType="touchUpInside" id="hSP-9n-qIO"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delete All Files" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L0N-0k-2Cy">
+                                <rect key="frame" x="271" y="761" width="113" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="bottom" secondItem="gML-oq-tbU" secondAttribute="bottom" constant="80" id="46q-SG-Sk1"/>
+                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="bottom" secondItem="L0N-0k-2Cy" secondAttribute="bottom" constant="80" id="E8E-65-SwQ"/>
+                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="trailing" secondItem="2Go-od-Nx6" secondAttribute="trailing" constant="62" id="GdB-JZ-Lk8"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="GsS-dJ-CKf"/>
+                            <constraint firstItem="L0N-0k-2Cy" firstAttribute="leading" secondItem="gML-oq-tbU" secondAttribute="trailing" constant="121" id="Ozz-nN-gt4"/>
+                            <constraint firstItem="2Go-od-Nx6" firstAttribute="leading" secondItem="Dbf-kE-5Bf" secondAttribute="trailing" constant="202" id="VGW-4W-1wX"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="bottom" secondItem="fQZ-KI-GVf" secondAttribute="bottom" id="VpT-BR-CcM"/>
+                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="trailing" secondItem="L0N-0k-2Cy" secondAttribute="trailing" constant="30" id="W9Q-m8-32z"/>
+                            <constraint firstItem="2Go-od-Nx6" firstAttribute="top" secondItem="fQZ-KI-GVf" secondAttribute="top" constant="661" id="XF3-8L-fnG"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="trailing" secondItem="fQZ-KI-GVf" secondAttribute="trailing" id="XyZ-9z-H8e"/>
+                            <constraint firstItem="gML-oq-tbU" firstAttribute="leading" secondItem="BrB-h1-WRS" secondAttribute="leading" id="Ymt-Jd-tcO"/>
+                            <constraint firstItem="L0N-0k-2Cy" firstAttribute="top" secondItem="2Go-od-Nx6" secondAttribute="bottom" constant="8.5" id="aKI-5X-aLo"/>
+                            <constraint firstItem="L0N-0k-2Cy" firstAttribute="baseline" secondItem="gML-oq-tbU" secondAttribute="baseline" id="fYW-P8-xek"/>
+                            <constraint firstItem="gML-oq-tbU" firstAttribute="top" secondItem="Dbf-kE-5Bf" secondAttribute="bottom" id="gLd-H1-Q2V"/>
+                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="bottom" secondItem="gML-oq-tbU" secondAttribute="bottom" constant="80" id="iCA-YU-jWI"/>
+                            <constraint firstItem="gML-oq-tbU" firstAttribute="centerX" secondItem="Dbf-kE-5Bf" secondAttribute="centerX" id="lzi-Hy-hjX"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" id="rJc-2c-zQA"/>
+                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="trailing" secondItem="L0N-0k-2Cy" secondAttribute="trailing" constant="30" id="zIT-y8-MY3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttonLabel" destination="gML-oq-tbU" id="IUf-4W-gk0"/>
+                        <outlet property="recordSwitchVal" destination="Dbf-kE-5Bf" id="gYS-xu-thY"/>
+                        <outlet property="sceneView" destination="BrB-h1-WRS" id="5nT-qQ-ynl"/>
+                        <outlet property="textField" destination="i2l-xe-bHh" id="3QQ-xQ-DGV"/>
+                        <outlet property="trashButton" destination="2Go-od-Nx6" id="Iqo-IA-4gT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="133.92857142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="trash" catalog="system" width="121" height="128"/>
+        <image name="video" catalog="system" width="128" height="83"/>
+        <image name="video.fill" catalog="system" width="128" height="82"/>
+    </resources>
+</document>
